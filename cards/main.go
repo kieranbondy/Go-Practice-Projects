@@ -1,12 +1,8 @@
 package main
 
 func main() {
-	cards := deck{newCard(), newCard()}
-	cards = append(cards, "Six of Spades")
+	cards := newDeckFromFile("myCards")
+	cards.shuffle()
 	cards.print()
 
-}
-
-func newCard() string {
-	return "Five of Diamonds"
 }
